@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="faaf9bed58664bee84409b1ef0374957" Name="Diagram1">
+        <EntityTypeShape EntityType="Manege_StoreModel.Borrower" Width="1.5" PointX="10" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.Customer" Width="1.5" PointX="7.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.Debtor" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.Product" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.purchase" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.purchases_Detile" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.Sale" Width="1.5" PointX="10" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.Sale_Detile" Width="1.5" PointX="12.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.Suppoler" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.TB_Users" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Manege_StoreModel.View_2" Width="1.5" PointX="5.75" PointY="10.75" IsExpanded="true" />
+        <AssociationConnector Association="Manege_StoreModel.FK_Borrower_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_Sale_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_Debtor_Suppoler" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_purchases_Detile_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_Sale_Detile_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_purchase_Suppoler" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_purchases_Detile_purchase" ManuallyRouted="false" />
+        <AssociationConnector Association="Manege_StoreModel.FK_Sale_Detile_Sale" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

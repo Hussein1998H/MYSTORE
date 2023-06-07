@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{750946F2-AEF5-4991-B80E-9C6D7585CA38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MYSTORE</RootNamespace>
+    <AssemblyName>MYSTORE</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Desktop\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="M_EntityFramework\Borrower.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Customer.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Debtor.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_Store.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_Store.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_Store.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_Store.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_Store.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_Store.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_StoreModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_StoreModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_StoreModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_StoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_StoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_Store_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_Store_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_Store_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Manege_Store_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Manege_Store_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Product.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\purchase.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\purchases_Detile.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Sale.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Sale_Detile.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Manege_Store.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Manege_Store.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\Suppoler.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\sysdiagram.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\sysdiagrams.cs">
+      <DependentUpon>Manege_StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\TB_Users.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="M_EntityFramework\View_2.cs">
+      <DependentUpon>Manege_Store_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Customer.Designer.cs">
+      <DependentUpon>frm_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_FastAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_FastAdd.Designer.cs">
+      <DependentUpon>frm_FastAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_inventory.Designer.cs">
+      <DependentUpon>frm_inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Notivecation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Notivecation.Designer.cs">
+      <DependentUpon>frm_Notivecation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Payment.Designer.cs">
+      <DependentUpon>frm_Payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Product.Designer.cs">
+      <DependentUpon>frm_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Purchase.Designer.cs">
+      <DependentUpon>frm_Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Purchase0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Purchase0.Designer.cs">
+      <DependentUpon>frm_Purchase0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Sale.Designer.cs">
+      <DependentUpon>frm_Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Sale0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Sale0.Designer.cs">
+      <DependentUpon>frm_Sale0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_setting.Designer.cs">
+      <DependentUpon>frm_setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Suppoler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Suppoler.Designer.cs">
+      <DependentUpon>frm_Suppoler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Useres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\frm_Useres.Designer.cs">
+      <DependentUpon>frm_Useres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_FORM\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_FORM\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI_FORM\frm_Customer.resx">
+      <DependentUpon>frm_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_FastAdd.resx">
+      <DependentUpon>frm_FastAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_inventory.resx">
+      <DependentUpon>frm_inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Notivecation.resx">
+      <DependentUpon>frm_Notivecation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Payment.resx">
+      <DependentUpon>frm_Payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Product.resx">
+      <DependentUpon>frm_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Purchase.resx">
+      <DependentUpon>frm_Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Purchase0.resx">
+      <DependentUpon>frm_Purchase0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Sale.resx">
+      <DependentUpon>frm_Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Sale0.resx">
+      <DependentUpon>frm_Sale0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_setting.resx">
+      <DependentUpon>frm_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Suppoler.resx">
+      <DependentUpon>frm_Suppoler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\frm_Useres.resx">
+      <DependentUpon>frm_Useres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_FORM\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="M_EntityFramework\Manege_Store.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Manege_Store.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="M_EntityFramework\Manege_Store.edmx.diagram">
+      <DependentUpon>Manege_Store.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="M_EntityFramework\Manege_StoreModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Manege_StoreModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="M_EntityFramework\Manege_StoreModel.edmx.diagram">
+      <DependentUpon>Manege_StoreModel.edmx</DependentUpon>
+    </None>
+    <EntityDeploy Include="M_EntityFramework\Manege_Store_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Manege_Store_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="M_EntityFramework\Manege_Store_Model.edmx.diagram">
+      <DependentUpon>Manege_Store_Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="M_EntityFramework\Manege_Store_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Manege_Store_Model.edmx</DependentUpon>
+      <LastGenOutput>Manege_Store_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="M_EntityFramework\Manege_Store_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Manege_Store_Model.edmx</DependentUpon>
+      <LastGenOutput>Manege_Store_Model.cs</LastGenOutput>
+    </Content>
+    <None Include="logo.png" />
+    <Content Include="logo.ico" />
+    <Content Include="M_EntityFramework\Manege_Store.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Manege_Store.edmx</DependentUpon>
+      <LastGenOutput>Manege_Store.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="M_EntityFramework\Manege_Store.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Manege_Store.edmx</DependentUpon>
+      <LastGenOutput>Manege_Store.cs</LastGenOutput>
+    </Content>
+    <Content Include="M_EntityFramework\Manege_StoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Manege_StoreModel.edmx</DependentUpon>
+      <LastGenOutput>Manege_StoreModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="M_EntityFramework\Manege_StoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Manege_StoreModel.edmx</DependentUpon>
+      <LastGenOutput>Manege_StoreModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
